@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<TITLE>BOMB//We have explosive! - Download</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT language="JavaScript"><!--
+function changeLayerVisibility()
+{
+  var visStr, args;
+  args = changeLayerVisibility.arguments;
+  visStr = args[1];
+  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
+    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+}
+//--></SCRIPT>
+<STYLE TYPE="text/css">
+a{text-decoration:none}
+</STYLE>
+</HEAD>
+
+<BODY bgcolor="#D07564" text="#000000" link="#ECA828" vlink="#ECA828" alink="#ECA828">
+<DIV id="backgnd2" style="position:absolute; width:354px; height:400px; z-index:1; left:446px; top:0px">
+  <IMG src="backgnd2.jpg" width="354" height="400"> 
+</DIV>
+<DIV id="backgnd1" style="position:absolute; width:627px; height:400px; z-index:2; left:0px; top:0px">
+  <IMG src="backgnd1.gif" width="627" height="400"> 
+</DIV>
+<DIV id="title" style="position:absolute; width:285px; height:42px; z-index:3; left: 0px; top:0px">
+  <IMG src="title.gif" width="285" height="42"> 
+</DIV>
+<DIV id="title2" style="position:absolute; width:271px; height:9px; z-index:3; left: 103px; top:16px">
+  <IMG src="t_arch.gif"> 
+</DIV>
+<DIV id="next" style="position:absolute; width:600px; height:21px; z-index:3; top:379px; left:0px">
+  <font size="1" face="Arial"><a href="archive.shtml"><img src="next.gif" border="0" width="155" height="21"></a>
+  &nbsp;[ <a href="index.htm">INTERNET LINKS</A> /
+  <a href="bbs.htm">BBS NUMBERS</a> /
+  PRODUCTIONS ]</font>
+</DIV>
+<!-- RUBRICS BAR -->
+<DIV id="rubbar" style="position:absolute; width:200px; height:14px; z-index:3; left:600px; top:386px">
+  <MAP name="rub_bar_map">
+    <AREA shape="rect" coords="0,0,24,13" href="../menu.htm" onmouseover="changeLayerVisibility('rub1hlp','visible')" onmouseout="changeLayerVisibility('rub1hlp','hidden')">
+    <AREA shape="rect" coords="25,0,49,13" href="../news/" onmouseover="changeLayerVisibility('rub2hlp','visible')" onmouseout="changeLayerVisibility('rub2hlp','hidden')">
+    <AREA shape="rect" coords="50,0,74,13" href="../memories/" onmouseover="changeLayerVisibility('rub3hlp','visible')" onmouseout="changeLayerVisibility('rub3hlp','hidden')">
+    <AREA shape="rect" coords="75,0,99,13" href="../projects/" onmouseover="changeLayerVisibility('rub4hlp','visible')" onmouseout="changeLayerVisibility('rub4hlp','hidden')">
+    <AREA shape="rect" coords="100,0,124,13" href="../pixelart/" onmouseover="changeLayerVisibility('rub5hlp','visible')" onmouseout="changeLayerVisibility('rub5hlp','hidden')">
+    <AREA shape="rect" coords="125,0,149,13" href="../credits/" onmouseover="changeLayerVisibility('rub6hlp','visible')" onmouseout="changeLayerVisibility('rub6hlp','hidden')">
+    <AREA shape="rect" coords="150,0,174,13" href="../download/" onmouseover="changeLayerVisibility('rub7hlp','visible')" onmouseout="changeLayerVisibility('rub7hlp','hidden')">
+    <AREA shape="rect" coords="175,0,199,13" href="../links/" onmouseover="changeLayerVisibility('rub8hlp','visible')" onmouseout="changeLayerVisibility('rub8hlp','hidden')">
+  </MAP>
+  <IMG src="../rub_bar.gif" width="200" height="14" border="0" usemap="#rub_bar_map" alt="click on the squares to browse through the rubrics">
+</DIV>
+<DIV id="rub1hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">main menu</FONT>
+</DIV>
+<DIV id="rub2hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">news</FONT>
+</DIV>
+<DIV id="rub3hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">bomb memories</FONT>
+</DIV>
+<DIV id="rub4hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">incoming projects</FONT>
+</DIV>
+<DIV id="rub5hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">pixel art</FONT>
+</DIV>
+<DIV id="rub6hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">credits</FONT>
+</DIV>
+<DIV id="rub7hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">download</FONT>
+</DIV>
+<DIV id="rub8hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">links</FONT>
+</DIV>
+<!-- CONTENTS -->
+<DIV id="contents" style="position:absolute; width:800px; height:250px; z-index:4; top:100px; left:0px">
+<table border="0" cellpadding="0" cellspacing="0" width="800">
+  <TR>
+    <TD>
+<!--#include file="arclst.inc" -->
+    </TD>
+    <TD width="200">&nbsp;</TD>
+    <td>
+      <applet code="AnFade.class" width="150" height="113">
+      <param name="image1" value="thumbs/casual1.jpg">
+      <param name="image2" value="thumbs/casual2.jpg">
+      <param name="image3" value="thumbs/casual1.jpg">
+      <param name="image4" value="thumbs/casual2.jpg">
+      <param name="image5" value="thumbs/casual1.jpg">
+      <param name="image6" value="thumbs/casual2.jpg">
+      <param name="res" value="1">
+      <param name="speed" value="8">
+      <param name="pause" value="1500">
+      <param name="memdelay" value="1000">
+      <param name="priority" value="3">
+      Sorry, your browser doesn't support Java.
+      </applet>
+      </td>
+      <td width="20"></td>
+      <td><font size="1" face="Arial">
+      <font color="#ECA828">CASUAL</font><br><br>
+      1st at the 3S party [Fr.02-04 sep.94]<br>
+      64ko intro compo<br>
+      Code : Gengis<br>
+      Gfx : Hof<br>
+      Music : Clawz<br><br>
+      Click <a href="amiga/casual.lha" style="text-decoration:none">HERE</a> for local download or try :<br>
+      <a href="ftp://ftp.funet.fi/pub/amiga/demos/bomb/bomb.casual.lha" style="text-decoration:none">ftp.funet.fi/pub/amiga/demos/bomb/bomb.casual.lha</a>
+    </font></td>
+  </TR>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,394 @@
+<HTML>
+<HEAD>
+<TITLE>BOMB//We have explosive! - Pixel Art</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT language="JavaScript"><!--
+function changeLayerVisibility()
+{
+  var visStr, args;
+  args = changeLayerVisibility.arguments;
+  visStr = args[1];
+  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
+    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+}
+//--></SCRIPT>
+<SCRIPT language="JavaScript"><!--
+
+var max_left = -7900;
+var max_right = -1;
+var pic_size = 160;
+var isdroite = 0;
+var isgauche = 1;
+
+ScrollObj = (navigator.appName == 'Netscape')?"document.layers[\'images\']":"document.all[\'images\'].style"
+
+function l_gauche()
+{
+  var valeur = parseInt(eval(ScrollObj+".left")) - pic_size;
+  if (valeur >= max_left)
+  {
+    eval(ScrollObj+".left = valeur");
+    if (isgauche==1)
+    {
+      isgauche = 0;
+      changeLayerVisibility('scrollm','visible');
+      changeLayerVisibility('scrollg','hidden');
+    }
+  }
+  if ( ((valeur - pic_size) < max_left) && (isdroite==0) )
+  {
+    isdroite = 1;
+    changeLayerVisibility('scrollm','hidden');
+    changeLayerVisibility('scrolld','visible');
+  }
+}
+
+function l_droite()
+{
+  var valeur = parseInt(eval(ScrollObj+".left")) + pic_size;
+  if (valeur <= max_right)
+  {
+    eval(ScrollObj+".left = valeur");
+    if (isdroite==1)
+    {
+      isdroite = 0;
+      changeLayerVisibility('scrollm','visible');
+      changeLayerVisibility('scrolld','hidden');
+    }
+  }
+  if ( ((valeur + pic_size) > max_right) && (isgauche==0) )
+  {
+    isgauche = 1;
+    changeLayerVisibility('scrollm','hidden');
+    changeLayerVisibility('scrollg','visible');
+  }
+}
+
+function ViewImage(nom,fen,x,y,scroll)
+{
+if (navigator.appName=="Microsoft Internet Explorer") window.open('made/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+(x)+",height="+(y))
+else if (navigator.userAgent.substring(0,9) == "Mozilla/3") window.open('made/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+(x)+",height="+(y))
+else if (navigator.userAgent.substring(0,9) == "Mozilla/4") window.open('made/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+x+",height="+y);
+}
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+a{text-decoration:none}
+</STYLE>
+</HEAD>
+
+<BODY bgcolor="#6870AC" text="#000000" link="#ECA828" vlink="#ECA828" alink="#ECA828" onload="changeLayerVisibility('scrollg','visible');">
+<DIV id="backgnd2" style="position:absolute; width:380px; height:400px; z-index:1; top: 0px; left: 420px">
+  <IMG src="backgnd2.jpg" width="380" height="400"> 
+</DIV>
+<DIV id="backgnd1" style="position:absolute; width:623px; height:400px; z-index:2; top: 0px; left: 0px">
+  <IMG src="backgnd1.gif" width="623" height="400"> 
+</DIV>
+<DIV id="title" style="position:absolute; width:278px; height:35px; z-index:3; left: 0px; top: 0px">
+  <IMG src="title.gif" width="278" height="35"> 
+</DIV>
+<DIV id="artist" style="position:absolute; width:159px; height:24px; z-index:3; left: 170px; top: 30px">
+  <IMG src="made.gif" width="159" height="24"> 
+</DIV>
+<DIV id="nicks" style="position:absolute; width:231px; height:18px; z-index:3; left: 0px; top: 382px">
+  <MAP name="nicks_map">
+    <AREA shape="rect" coords="0,0,81,18" href="index.htm">
+    <AREA shape="rect" coords="89,0,165,18" href="index_titan.htm">
+    <AREA shape="rect" coords="177,0,231,18" href="index_boz.htm">
+  </MAP>
+  <IMG src="nicks.gif" width="231" height="18" border="0" usemap="#nicks_map"> 
+</DIV>
+<!-- RUBRICS BAR -->
+<DIV id="rubbar" style="position:absolute; width:200px; height:14px; z-index:3; left:600px; top:386px">
+  <MAP name="rub_bar_map">
+    <AREA shape="rect" coords="0,0,24,13" href="../menu.htm" onmouseover="changeLayerVisibility('rub1hlp','visible')" onmouseout="changeLayerVisibility('rub1hlp','hidden')">
+    <AREA shape="rect" coords="25,0,49,13" href="../news/" onmouseover="changeLayerVisibility('rub2hlp','visible')" onmouseout="changeLayerVisibility('rub2hlp','hidden')">
+    <AREA shape="rect" coords="50,0,74,13" href="../memories/" onmouseover="changeLayerVisibility('rub3hlp','visible')" onmouseout="changeLayerVisibility('rub3hlp','hidden')">
+    <AREA shape="rect" coords="75,0,99,13" href="../projects/" onmouseover="changeLayerVisibility('rub4hlp','visible')" onmouseout="changeLayerVisibility('rub4hlp','hidden')">
+    <AREA shape="rect" coords="100,0,124,13" href="../pixelart/" onmouseover="changeLayerVisibility('rub5hlp','visible')" onmouseout="changeLayerVisibility('rub5hlp','hidden')">
+    <AREA shape="rect" coords="125,0,149,13" href="../credits/" onmouseover="changeLayerVisibility('rub6hlp','visible')" onmouseout="changeLayerVisibility('rub6hlp','hidden')">
+    <AREA shape="rect" coords="150,0,174,13" href="../download/" onmouseover="changeLayerVisibility('rub7hlp','visible')" onmouseout="changeLayerVisibility('rub7hlp','hidden')">
+    <AREA shape="rect" coords="175,0,199,13" href="../links/" onmouseover="changeLayerVisibility('rub8hlp','visible')" onmouseout="changeLayerVisibility('rub8hlp','hidden')">
+  </MAP>
+  <IMG src="../rub_bar.gif" width="200" height="14" border="0" usemap="#rub_bar_map" alt="click on the squares to browse through the rubrics">
+</DIV>
+<DIV id="rub1hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">main menu</FONT>
+</DIV>
+<DIV id="rub2hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">news</FONT>
+</DIV>
+<DIV id="rub3hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">bomb memories</FONT>
+</DIV>
+<DIV id="rub4hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">incoming projects</FONT>
+</DIV>
+<DIV id="rub5hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">pixel art</FONT>
+</DIV>
+<DIV id="rub6hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">credits</FONT>
+</DIV>
+<DIV id="rub7hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">download</FONT>
+</DIV>
+<DIV id="rub8hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">links</FONT>
+</DIV>
+<DIV id="scrollg" style="position:absolute; width:30px; height:15px; z-index:4; left:0px; top:255px; visibility:hidden">
+  <A HREF="javascript:l_gauche()"><IMG src="fleg.gif" border="0" width="30" height="15"></A>
+</DIV>
+<DIV id="scrollm" style="position:absolute; width:28px; height:26px; z-index:4; left:0px; top:250px; visibility:hidden">
+  <MAP NAME="BombMap0">
+  <AREA SHAPE="POLYGON" COORDS="0, 0, 28, 7, 0, 16" HREF="javascript:l_droite()">
+  <AREA SHAPE="POLYGON" COORDS="0, 18, 28, 9, 28, 26" HREF="javascript:l_gauche()">
+  </MAP><IMG src="flem.gif" border="0" width="28" height="26" usemap="#BombMap0">
+</DIV>
+<DIV id="scrolld" style="position:absolute; width:30px; height:15px; z-index:4; left:0px; top:255px; visibility:hidden">
+  <A HREF="javascript:l_droite()"><IMG src="fled.gif" border="0" width="30" height="15"></A>
+</DIV>
+<DIV id="images" style="position:absolute; width:7000px; height:227px; z-index:3; left:-1px; top:124px">
+<TABLE border="0" cellpadding="4">
+	<TR align="RIGHT" valign="TOP"> 
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('a_reign.htm','areign',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/a_reign.jpg" width="150" height="113" border="0"><BR>
+			Animal reign</A><BR>
+			3th at The Party 5<BR>
+			368x253/87c</FONT></TD>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('areign2.htm','areign2',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/a_reign2.jpg" width="150" height="113" border="0"><BR>
+			Animal Reign 2</A><BR>
+			2nd at XTakeOver'97<br>
+			640x480/16M</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('babylona.htm','babylona',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/babylona.jpg" width="150" height="113" border="0"><BR>
+			Babylona</A><BR>
+			1st at The Assembly'96<br>
+			320x256/121c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('bj0rk.htm','bjork',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/bj0rk.jpg" width="150" height="113" border="0"><BR>
+			Bj&ouml;rk</A><BR>
+			Imphobia 12 Cover Picture<br>
+			640x480/16c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('blue-nun.htm','bluenun',320,283,0);" style="text-decoration: none;">
+			<IMG src="made/blue-nun.jpg" width="150" height="113" border="0"><BR>
+			Blue Nun</A><BR>
+			320x283/64c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('bunny.htm','bunny',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/bunny.jpg" width="150" height="113" border="0"><BR>
+			Bunny</A><BR>
+			320x256/31c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('celia.htm','celia',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/celia.jpg" width="150" height="113" border="0"><BR>
+			Celia</A><BR>
+			640x480/229c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('celticf.htm','celticf',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/celticf.jpg" width="150" height="113" border="0"><BR>
+			Celtic Fury</A><BR>
+			362x283/32c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('chaos_d.htm','chaosd',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/chaos_d.jpg" width="150" height="113" border="0"><BR>
+			Chaos Devotion</A><BR>
+			320x256/88c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('clary_f.htm','claryf',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/clary_f.jpg" width="150" height="113" border="0"><BR>
+			Clary On T'Aime</A><BR>
+			320x256/4c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('de-anima.htm','deanima',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/de-anima.jpg" width="150" height="113" border="0"><BR>
+			De-anima</A><BR>
+			11th at Saturne 4<br>
+			320x256/83c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('devil_v2.htm','devilv2',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/devil_v2.jpg" width="150" height="113" border="0"><BR>
+			Devil Inside</A><BR>
+			320x256/64c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('dyna.htm','dyna',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/dyna.jpg" width="150" height="113" border="0"><BR>
+			Dyna</A><BR>
+			Volcanic Party 4<BR>
+			640x480/16Mc</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('eden377.htm','eden377',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/eden377.jpg" width="150" height="113" border="0"><BR>
+			Eden 377</A><BR>
+			2nd at The Party 6<br>
+			320x256/125c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('enolagay.htm','enolagay',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/enolagay.jpg" width="150" height="113" border="0"><BR>
+			Enola Gay</A><BR>
+			368x283/128c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('eva.htm','eva',320,200,0);" style="text-decoration: none;">
+			<IMG src="made/eva.jpg" width="150" height="113" border="0"><BR>
+			Eva (with Gelmir/MWB)</A><BR>
+			12th at the Wired'97<br>
+			320x200/119c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('fingers.htm','fingers',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/fingers.jpg" width="150" height="113" border="0"><BR>
+			Fingers Linkin'Good</A><BR>
+			368x283/60c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="made/pictures/fishy.zip" style="text-decoration: none;">
+			<IMG src="made/fishy.jpg" width="150" height="113" border="0"><BR>
+			Fishy!</A><BR>
+			1st at the Place to Be 5<br>
+			640x480/16M</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('flux.htm','flux',320,240,0);" style="text-decoration: none;">
+			<IMG src="made/flux.jpg" width="150" height="113" border="0"><BR>
+			Flux</A><BR>
+			2nd at The Party 8<br>
+			320x240/256c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('freaks-1.htm','freaks1',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/freaks-1.jpg" width="150" height="113" border="0"><BR>
+			Freaks Of Loom</A><BR>
+			368x283/63c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('gratitud.htm','gratitud',640,512,0);" style="text-decoration: none;">
+			<IMG src="made/gratitud.jpg" width="150" height="113" border="0"><BR>
+			Gratitude</A><BR>
+			640x512/53c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('hades.htm','hades',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/hades.jpg" width="150" height="113" border="0"><BR>
+			Hades</A><BR>
+			2nd at Volcanic Party 4<BR>
+			320x256/109c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('hype.htm','hype',320,240,0);" style="text-decoration: none;">
+			<IMG src="made/hype.jpg" width="150" height="113" border="0"><BR>
+			Hype</A><BR>
+			Volcanic Party 4<BR>
+			320x240/110c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('infesta3.htm','infesta3',320,283,0);" style="text-decoration: none;">
+			<IMG src="made/infesta3.jpg" width="150" height="113" border="0"><BR>
+			Scoopex Infestation Pack</A><BR>
+			320x283/32c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('junky.htm','junky',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/junky.jpg" width="150" height="113" border="0"><BR>
+			Junky Trip</A><BR>
+			362x283/30c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('karvel.htm','karvel',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/karvel.jpg" width="150" height="113" border="0"><BR>
+			Karvel</A><BR>
+			640x480/16Mc</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('lephant.htm','lephant',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/lephant.jpg" width="150" height="113" border="0"><BR>
+			L&phant</A><BR>
+			320x256/32c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('lostpara.htm','lostpara',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/lostpara.jpg" width="150" height="113" border="0"><BR>
+			Lost Paradise</A><BR>
+			362x283/63c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('ltp-eye.htm','ltpeye',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/ltp-eye.jpg" width="150" height="113" border="0"><BR>
+			LTP Fast Compo Eye</A><BR>
+			320x256/58c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('nevin.htm','nevin',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/nevin.jpg" width="150" height="113" border="0"><BR>
+			Nevin</A><BR>
+			2nd at the Saturne 3<br>
+			320x256/58c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('nudge.htm','nudge',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/nudge.jpg" width="150" height="113" border="0"><BR>
+			The Nudge</A><BR>
+			368x283/147c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('phantis.htm','phantis',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/phantis.jpg" width="150" height="113" border="0"><BR>
+			Phantis</A><BR>
+			1st at the Volcanic 3<br>
+			320x256/62c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('propaga5.htm','propaga5',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/propaga5.jpg" width="150" height="113" border="0"><BR>
+			Propaganda 5 Cover Picture</A><BR>
+			320x256/45c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('protect.htm','protect',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/protect.jpg" width="150" height="113" border="0"><BR>
+			Protection</A><BR>
+			320x256/31c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('pure.htm','protect',800,600,0);" style="text-decoration: none;">
+			<IMG src="made/pure.jpg" width="150" height="113" border="0"><BR>
+			Pure</A><BR>
+			1st at the Volcanic 5<br>
+			800x600/16Mc</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('scarcrow.htm','scarcrow',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/scarcrow.jpg" width="150" height="113" border="0"><BR>
+			Scarcrow Monster</A><BR>
+			320x256/62c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('s-dream.htm','sdream',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/s-dream.jpg" width="150" height="113" border="0"><BR>
+			Sweet Dream</A><BR>
+			368x283/62c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('secret-m.htm','secretm',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/secret-m.jpg" width="150" height="113" border="0"><BR>
+			Secret Moments</A><BR>
+			362x283/52c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('seeing.htm','seeing',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/seeing.jpg" width="150" height="113" border="0"><BR>
+			Seeing</A><BR>
+			5th at the Gasp'95<br>
+			320x256/42c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('seenpnt.htm','seenpnt',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/seenpnt.jpg" width="150" height="113" border="0"><BR>
+			SeenPoint 2 Cover Picture</A><BR>
+			320x256/62c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('sunflow.htm','sunflow',320,200,0);" style="text-decoration: none;">
+			<IMG src="made/sunflow.jpg" width="150" height="113" border="0"><BR>
+			SunFlower Intro Picture</A><BR>
+			320x200/110c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('sunygirl.htm','sunygirl',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/sunygirl.jpg" width="150" height="113" border="0"><BR>
+			SunyGirl</A><BR>
+			362x283/31c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('sureshot.htm','sureshot',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/sureshot.jpg" width="150" height="113" border="0"><BR>
+			SureShot</A><BR>
+			1st at the LTP'97<br>
+			320x256/125c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('sweet_fo.htm','sweetfo',362,283,0);" style="text-decoration: none;">
+			<IMG src="made/sweet_fo.jpg" width="150" height="113" border="0"><BR>
+			Sweet For My Sweet</A><BR>
+			362x283/32c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('takeover.htm','takeover',640,480,1);" style="text-decoration: none;">
+			<IMG src="made/takeover.jpg" width="150" height="113" border="0"><BR>
+			Takeover'98</A><BR>
+			1181x1654/16Mc</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('teardrop.htm','teardrop',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/teardrop.jpg" width="150" height="113" border="0"><BR>
+			Teardrop</A><BR>
+			1st at Takeover'98<BR>
+			640x480/241c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('terrifik.htm','terrifik',320,256,0);" style="text-decoration: none;">
+			<IMG src="made/terrifik.jpg" width="150" height="113" border="0"><BR>
+			Terrifik Gallery</A><BR>
+			320x256/16c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('w97.htm','w97',640,480,1);" style="text-decoration: none;">
+			<IMG src="made/w97.jpg" width="150" height="113" border="0"><BR>
+			Wired 97 T-shirt Picture</A><BR>
+			A4/300dpi [44Mo]<BR>
+			short version</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('waiting.htm','waiting',368,283,0);" style="text-decoration: none;">
+			<IMG src="made/waiting.jpg" width="150" height="113" border="0"><BR>
+			Waiting For</A><BR>
+			368x283/64c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('whanna.htm','whanna',320,283,0);" style="text-decoration: none;">
+			<IMG src="made/whanna.jpg" width="150" height="113" border="0"><BR>
+			Whanna Learn?</A><BR>
+			320x283/31c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('yoryko.htm','yoryko',640,480,0);" style="text-decoration: none;">
+			<IMG src="made/yoryko.jpg" width="150" height="113" border="0"><BR>
+			Yoryko</A><BR>
+			2nd at Wired'97<br>
+			640x480/256c</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="made/pictures/hp48.zip" style="text-decoration: none;">
+			<IMG src="made/hp48.jpg" width="150" height="113" border="0"><BR>
+			HP48 archive</A><BR>
+			1995 to today</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="made/pictures/logos.zip" style="text-decoration: none;">
+			<IMG src="made/logos.jpg" width="150" height="113" border="0"><BR>
+			Logos archive</A><BR>
+			1992 to today</font></td>
+		<TD><FONT face="Arial" size="1"><A HREF="../donwload/pc/a_bomb.zip" style="text-decoration: none;">
+			<IMG src="made/a-bomb.jpg" width="150" height="113" border="0"><BR>
+			A-BOMB</A><BR>
+			Winamp skin (1998)</font></td>
+	</TR>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

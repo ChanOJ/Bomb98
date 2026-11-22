@@ -1,0 +1,125 @@
+<HTML>
+
+<HEAD>
+<TITLE>BOMB//We have explosive! - Menu</TITLE>
+<SCRIPT language="JavaScript">
+function MM_showHideLayers() { //v1.0
+  var i, visStr, args;
+  args = MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) { //with arg triples (objNS,objIE,visStr)
+    visStr   = args[i+2];
+    if (navigator.appName == 'Netscape') {
+      if (document.layers != null) eval(args[i]+".visibility = '"+visStr+"'");
+    } else { //IE
+      if (visStr == 'show') visStr = 'visible'; //convert vals
+      if (visStr == 'hide') visStr = 'hidden';
+      if (document.all != null) eval(args[i+1]+".style.visibility = '"+visStr+"'");
+  } }
+}
+</SCRIPT>
+<SCRIPT language="JavaScript"><!--
+var v=-1;
+var y=170;
+var x=790;
+var dx=4;
+ScrollObj = (navigator.appName == 'Netscape')?"document.layers[\'compteur\']":"document.all[\'compteur\'].style"
+
+function tombe()
+{
+  y += v;
+  v -= 0.5; // champ de gravite (0 = espace)
+  x -= dx; // pif 13
+  dx += 0.03;
+  if (y<0)
+  {
+    y = -y;
+    v = -v-4; // amortissement du rebond (0 = infini)
+    if (v>=0) setTimeout("tombe()",25);
+    else y=0;
+    dx -= 1;
+  }
+  else
+  {
+    setTimeout("tombe()",25);
+  }
+
+  if ((y==0) && (v<0) && (x<750)) setTimeout("tombe()",25);
+
+  eval(ScrollObj+".left = 790-x");
+  eval(ScrollObj+".top = 151-y");
+}
+//--></SCRIPT>
+<STYLE TYPE="text/css">
+a{text-decoration:none}
+</STYLE>
+</HEAD>
+
+<BODY background="menu_bkg.jpg" bgcolor="#ECA828" onload="tombe()">
+<DIV id="bomb" style="position:absolute; width:291px; height:149px; z-index:2; left:0; top:0">
+  <IMG src="menu_bmb.gif" border="0" width="291" height="149"> 
+</DIV>
+<DIV id="compteur" style="position:absolute; width:225px; height:12px; z-index:2; left:0; top:-50">
+	<IMG src="/cgi-bin/counter.cgi?position=5">
+	<IMG src="/cgi-bin/counter.cgi?position=4">
+	<IMG src="/cgi-bin/counter.cgi?position=3">
+	<IMG src="/cgi-bin/counter.cgi?position=2">
+	<IMG src="/cgi-bin/counter.cgi?position=1">
+	<IMG src="visitors.gif" border="0" width="104" height="12"> 
+</DIV>
+<DIV id="menu" style="position:absolute; width:240px; height:206px; z-index:1; left:560px; top:182px">
+  <IMG src="menu_mnu.gif" border="0" width="240" height="206" usemap="#menu_map"> 
+</DIV>
+<DIV id="hnews" style="position:absolute; width:198px; height:35px; z-index:2; left:602; top:174; visibility: hidden">
+  <A href="news/" onmouseover="MM_showHideLayers('document.layers[\'hnews\']','document.all[\'hnews\']','show','document.layers[\'fnews\']','document.all[\'fnews\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hnews\']','document.all[\'hnews\']','hide','document.layers[\'fnews\']','document.all[\'fnews\']','hide')"><IMG src="h_news.gif" width="198" height="35" border="0"></A>
+</DIV>
+<DIV id="hmemories" style="position:absolute; width:242px; height:58px; z-index:2; left:558; top:197; visibility: hidden">
+  <A href="memories/" onmouseover="MM_showHideLayers('document.layers[\'hmemories\']','document.all[\'hmemories\']','show','document.layers[\'fmemories\']','document.all[\'fmemories\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hmemories\']','document.all[\'hmemories\']','hide','document.layers[\'fmemories\']','document.all[\'fmemories\']','hide')"><IMG src="h_memories.gif" width="242" height="58" border="0"></A>
+</DIV>
+<DIV id="hprojects" style="position:absolute; width:230px; height:56px; z-index:2; left:570; top:240; visibility: hidden">
+  <A href="projects/" onmouseover="MM_showHideLayers('document.layers[\'hprojects\']','document.all[\'hprojects\']','show','document.layers[\'fprojects\']','document.all[\'fprojects\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hprojects\']','document.all[\'hprojects\']','hide','document.layers[\'fprojects\']','document.all[\'fprojects\']','hide')"><IMG src="h_projects.gif" width="230" height="56" border="0"></A>
+</DIV>
+<DIV id="hpixelart" style="position:absolute; width:199px; height:50px; z-index:2; left:551; top:276; visibility: hidden">
+  <A href="pixelart/" onmouseover="MM_showHideLayers('document.layers[\'hpixelart\']','document.all[\'hpixelart\']','show','document.layers[\'fpixelart\']','document.all[\'fpixelart\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hpixelart\']','document.all[\'hpixelart\']','hide','document.layers[\'fpixelart\']','document.all[\'fpixelart\']','hide')"><IMG src="h_pixelart.gif" width="199" height="50" border="0"></A>
+</DIV>
+<DIV id="hcredits" style="position:absolute; width:173px; height:40px; z-index:2; left:627; top:304; visibility: hidden">
+  <A href="credits/" onmouseover="MM_showHideLayers('document.layers[\'hcredits\']','document.all[\'hcredits\']','show','document.layers[\'fcredits\']','document.all[\'fcredits\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hcredits\']','document.all[\'hcredits\']','hide','document.layers[\'fcredits\']','document.all[\'fcredits\']','hide')"><IMG src="h_credits.gif" width="173" height="40" border="0"></A>
+</DIV>
+<DIV id="hdownload" style="position:absolute; width:221px; height:49px; z-index:2; left:572; top:320; visibility: hidden">
+  <A href="download/" onmouseover="MM_showHideLayers('document.layers[\'hdownload\']','document.all[\'hdownload\']','show','document.layers[\'fdownload\']','document.all[\'fdownload\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hdownload\']','document.all[\'hdownload\']','hide','document.layers[\'fdownload\']','document.all[\'fdownload\']','hide')"><IMG src="h_download.gif" width="221" height="49" border="0"></A>
+</DIV>
+<DIV id="hlinks" style="position:absolute; width:87px; height:46px; z-index:2; left:699; top:347; visibility: hidden">
+  <A href="links/" onmouseover="MM_showHideLayers('document.layers[\'hlinks\']','document.all[\'hlinks\']','show','document.layers[\'flinks\']','document.all[\'flinks\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hlinks\']','document.all[\'hlinks\']','hide','document.layers[\'flinks\']','document.all[\'flinks\']','hide')"><IMG src="h_links.gif" width="87" height="46" border="0"></A>
+</DIV>
+<DIV id="fnews" style="position:absolute; width:19px; height:11px; z-index:2; left:522; top:188; visibility: hidden">
+  <IMG src="flech1.gif" width="19" height="11"> 
+</DIV>
+<DIV id="fmemories" style="position:absolute; width:19px; height:11px; z-index:2; left:488; top:221; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<DIV id="fprojects" style="position:absolute; width:19px; height:11px; z-index:2; left:457; top:260; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<DIV id="fpixelart" style="position:absolute; width:19px; height:11px; z-index:2; left:436; top:294; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<DIV id="fcredits" style="position:absolute; width:19px; height:11px; z-index:2; left:424; top:318; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<DIV id="fdownload" style="position:absolute; width:19px; height:11px; z-index:2; left:417; top:340; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<DIV id="flinks" style="position:absolute; width:19px; height:11px; z-index:2; left:412; top:365; visibility: hidden">
+  <IMG src="flech2.gif" width="19" height="11"> 
+</DIV>
+<BR>
+<MAP name="menu_map">
+  <AREA shape="rect" coords="144,179,220,205" href="links/" onmouseover="MM_showHideLayers('document.layers[\'hlinks\']','document.all[\'hlinks\']','show','document.layers[\'flinks\']','document.all[\'flinks\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hlinks\']','document.all[\'hlinks\']','hide','document.layers[\'flinks\']','document.all[\'flinks\']','hide')">
+  <AREA shape="poly" coords="20,179,20,145,72,145,72,155,226,155,226,179" href="download/" onmouseover="MM_showHideLayers('document.layers[\'hdownload\']','document.all[\'hdownload\']','show','document.layers[\'fdownload\']','document.all[\'fdownload\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hdownload\']','document.all[\'hdownload\']','hide','document.layers[\'fdownload\']','document.all[\'fdownload\']','hide')">
+  <AREA shape="poly" coords="239,154,74,154,74,129,108,129,108,136,181,136,181,127,239,127,239,155" href="credits/" onmouseover="MM_showHideLayers('document.layers[\'hcredits\']','document.all[\'hcredits\']','show','document.layers[\'fcredits\']','document.all[\'fcredits\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hcredits\']','document.all[\'hcredits\']','hide','document.layers[\'fcredits\']','document.all[\'fcredits\']','hide')">
+  <AREA shape="poly" coords="0,130,0,129,0,113,113,113,113,108,180,108,180,136,110,136,110,129,0,129" href="pixelart/" onmouseover="MM_showHideLayers('document.layers[\'hpixelart\']','document.all[\'hpixelart\']','show','document.layers[\'fpixelart\']','document.all[\'fpixelart\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hpixelart\']','document.all[\'hpixelart\']','hide','document.layers[\'fpixelart\']','document.all[\'fpixelart\']','hide')">
+  <AREA shape="poly" coords="16,84,16,67,239,67,237,89,228,89,228,107,33,107,33,83,16,83" href="projects/" onmouseover="MM_showHideLayers('document.layers[\'hprojects\']','document.all[\'hprojects\']','show','document.layers[\'fprojects\']','document.all[\'fprojects\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hprojects\']','document.all[\'hprojects\']','hide','document.layers[\'fprojects\']','document.all[\'fprojects\']','hide')">
+  <AREA shape="poly" coords="7,65,7,24,166,24,166,44,239,44,239,67,7,66" href="memories/" onmouseover="MM_showHideLayers('document.layers[\'hmemories\']','document.all[\'hmemories\']','show','document.layers[\'fmemories\']','document.all[\'fmemories\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hmemories\']','document.all[\'hmemories\']','hide','document.layers[\'fmemories\']','document.all[\'fmemories\']','hide')">
+  <AREA shape="rect" coords="48,0,239,23" href="news/" onmouseover="MM_showHideLayers('document.layers[\'hnews\']','document.all[\'hnews\']','show','document.layers[\'fnews\']','document.all[\'fnews\']','show')" onmouseout="MM_showHideLayers('document.layers[\'hnews\']','document.all[\'hnews\']','hide','document.layers[\'fnews\']','document.all[\'fnews\']','hide')">
+</MAP>
+</BODY>
+</HTML>

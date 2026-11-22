@@ -1,0 +1,193 @@
+<HTML>
+<HEAD>
+<TITLE>BOMB//We have explosive! - Pixel Art</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT language="JavaScript"><!--
+function changeLayerVisibility()
+{
+  var visStr, args;
+  args = changeLayerVisibility.arguments;
+  visStr = args[1];
+  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
+    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+}
+//--></SCRIPT>
+<SCRIPT language="JavaScript"><!--
+
+var max_left = -600;
+var max_right = -1;
+var pic_size = 160;
+var isdroite = 0;
+var isgauche = 1;
+
+ScrollObj = (navigator.appName == 'Netscape')?"document.layers[\'images\']":"document.all[\'images\'].style"
+
+function l_gauche()
+{
+  var valeur = parseInt(eval(ScrollObj+".left")) - pic_size;
+  if (valeur >= max_left)
+  {
+    eval(ScrollObj+".left = valeur");
+    if (isgauche==1)
+    {
+      isgauche = 0;
+      changeLayerVisibility('scrollm','visible');
+      changeLayerVisibility('scrollg','hidden');
+    }
+  }
+  if ( ((valeur - pic_size) < max_left) && (isdroite==0) )
+  {
+    isdroite = 1;
+    changeLayerVisibility('scrollm','hidden');
+    changeLayerVisibility('scrolld','visible');
+  }
+}
+
+function l_droite()
+{
+  var valeur = parseInt(eval(ScrollObj+".left")) + pic_size;
+  if (valeur <= max_right)
+  {
+    eval(ScrollObj+".left = valeur");
+    if (isdroite==1)
+    {
+      isdroite = 0;
+      changeLayerVisibility('scrollm','visible');
+      changeLayerVisibility('scrolld','hidden');
+    }
+  }
+  if ( ((valeur + pic_size) > max_right) && (isgauche==0) )
+  {
+    isgauche = 1;
+    changeLayerVisibility('scrollm','hidden');
+    changeLayerVisibility('scrollg','visible');
+  }
+}
+
+function ViewImage(nom,fen,x,y,scroll)
+{
+if (navigator.appName=="Microsoft Internet Explorer") window.open('titan/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+(x)+",height="+(y))
+else if (navigator.userAgent.substring(0,9) == "Mozilla/3") window.open('titan/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+(x)+",height="+(y))
+else if (navigator.userAgent.substring(0,9) == "Mozilla/4") window.open('titan/pictures/'+nom, fen,"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+scroll+",resizable="+scroll+",width="+x+",height="+y);
+}
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+a{text-decoration:none}
+</STYLE>
+</HEAD>
+
+<BODY bgcolor="#6870AC" text="#000000" link="#ECA828" vlink="#ECA828" alink="#ECA828" onload="changeLayerVisibility('scrollg','visible');">
+<DIV id="backgnd2" style="position:absolute; width:380px; height:400px; z-index:1; top: 0px; left: 420px">
+  <IMG src="backgnd2.jpg" width="380" height="400"> 
+</DIV>
+<DIV id="backgnd1" style="position:absolute; width:623px; height:400px; z-index:2; top: 0px; left: 0px">
+  <IMG src="backgnd1.gif" width="623" height="400"> 
+</DIV>
+<DIV id="title" style="position:absolute; width:278px; height:35px; z-index:3; left: 0px; top: 0px">
+  <IMG src="title.gif" width="278" height="35"> 
+</DIV>
+<DIV id="artist" style="position:absolute; width:150px; height:24px; z-index:3; left: 170px; top: 30px">
+  <IMG src="titan.gif" width="150" height="24"> 
+</DIV>
+<DIV id="nicks" style="position:absolute; width:231px; height:18px; z-index:3; left: 0px; top: 382px">
+  <MAP name="nicks_map">
+    <AREA shape="rect" coords="0,0,81,18" href="index.htm">
+    <AREA shape="rect" coords="89,0,165,18" href="index_titan.htm">
+    <AREA shape="rect" coords="177,0,231,18" href="index_boz.htm">
+  </MAP>
+  <IMG src="nicks.gif" width="231" height="18" border="0" usemap="#nicks_map"> 
+</DIV>
+<!-- RUBRICS BAR -->
+<DIV id="rubbar" style="position:absolute; width:200px; height:14px; z-index:3; left:600px; top:386px">
+  <MAP name="rub_bar_map">
+    <AREA shape="rect" coords="0,0,24,13" href="../menu.htm" onmouseover="changeLayerVisibility('rub1hlp','visible')" onmouseout="changeLayerVisibility('rub1hlp','hidden')">
+    <AREA shape="rect" coords="25,0,49,13" href="../news/" onmouseover="changeLayerVisibility('rub2hlp','visible')" onmouseout="changeLayerVisibility('rub2hlp','hidden')">
+    <AREA shape="rect" coords="50,0,74,13" href="../memories/" onmouseover="changeLayerVisibility('rub3hlp','visible')" onmouseout="changeLayerVisibility('rub3hlp','hidden')">
+    <AREA shape="rect" coords="75,0,99,13" href="../projects/" onmouseover="changeLayerVisibility('rub4hlp','visible')" onmouseout="changeLayerVisibility('rub4hlp','hidden')">
+    <AREA shape="rect" coords="100,0,124,13" href="../pixelart/" onmouseover="changeLayerVisibility('rub5hlp','visible')" onmouseout="changeLayerVisibility('rub5hlp','hidden')">
+    <AREA shape="rect" coords="125,0,149,13" href="../credits/" onmouseover="changeLayerVisibility('rub6hlp','visible')" onmouseout="changeLayerVisibility('rub6hlp','hidden')">
+    <AREA shape="rect" coords="150,0,174,13" href="../download/" onmouseover="changeLayerVisibility('rub7hlp','visible')" onmouseout="changeLayerVisibility('rub7hlp','hidden')">
+    <AREA shape="rect" coords="175,0,199,13" href="../links/" onmouseover="changeLayerVisibility('rub8hlp','visible')" onmouseout="changeLayerVisibility('rub8hlp','hidden')">
+  </MAP>
+  <IMG src="../rub_bar.gif" width="200" height="14" border="0" usemap="#rub_bar_map" alt="click on the squares to browse through the rubrics">
+</DIV>
+<DIV id="rub1hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">main menu</FONT>
+</DIV>
+<DIV id="rub2hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">news</FONT>
+</DIV>
+<DIV id="rub3hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">bomb memories</FONT>
+</DIV>
+<DIV id="rub4hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">incoming projects</FONT>
+</DIV>
+<DIV id="rub5hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">pixel art</FONT>
+</DIV>
+<DIV id="rub6hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">credits</FONT>
+</DIV>
+<DIV id="rub7hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">download</FONT>
+</DIV>
+<DIV id="rub8hlp" style="position:absolute; width:100px; height:10px; z-index:3; top:366px; left:600px; visibility:hidden">
+  <FONT size="1" face="Arial">links</FONT>
+</DIV>
+<DIV id="scrollg" style="position:absolute; width:30px; height:15px; z-index:4; left:0px; top:255px; visibility:hidden">
+  <A HREF="javascript:l_gauche()"><IMG src="fleg.gif" border="0" width="30" height="15"></A>
+</DIV>
+<DIV id="scrollm" style="position:absolute; width:28px; height:26px; z-index:4; left:0px; top:250px; visibility:hidden">
+  <MAP NAME="BombMap0">
+  <AREA SHAPE="POLYGON" COORDS="0, 0, 28, 7, 0, 16" HREF="javascript:l_droite()">
+  <AREA SHAPE="POLYGON" COORDS="0, 18, 28, 9, 28, 26" HREF="javascript:l_gauche()">
+  </MAP><IMG src="flem.gif" border="0" width="28" height="26" usemap="#BombMap0">
+</DIV>
+<DIV id="scrolld" style="position:absolute; width:30px; height:15px; z-index:4; left:0px; top:255px; visibility:hidden">
+  <A HREF="javascript:l_droite()"><IMG src="fled.gif" border="0" width="30" height="15"></A>
+</DIV>
+<DIV id="images" style="position:absolute; width:7000px; height:227px; z-index:3; left:-1px; top:124px">
+  <TABLE border="0" cellpadding="4">
+    <TR align="RIGHT" valign="TOP"> 
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('curl.htm','areign',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/curl.jpg" width="150" height="113" border="0"><BR>
+        ChitChat9 Cover Picture</A><BR>
+        320x256/32c</FONT></TD>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('discus.htm','areign2',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/discus.jpg" width="150" height="113" border="0"><BR>
+        Discus Thrower</A><BR>
+        320x256/32c</font></td>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('hodge.htm','babylona',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/hodge.jpg" width="150" height="113" border="0"><BR>
+        The Hodge</A><BR>
+        16th at the Saturne 3<br>
+        320x256/122c</font></td>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('mrhyde.htm','bjork',321,259,0);" style="text-decoration: none;">
+        <IMG src="titan/mrhyde.jpg" width="150" height="113" border="0"><BR>
+        Mr Hyde</A><BR>
+        38th at The Party 4<br>
+        321x259/122c</font></td>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('probotec.htm','bluenun',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/probotec.jpg" width="150" height="113" border="0"><BR>
+        Probotector</A><BR>
+        42th at The Party 2<BR>
+        320x256/32c</font></td>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('secret.htm','bunny',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/secret.jpg" width="150" height="113" border="0"><BR>
+        La Jambe Bleue</A><BR>
+        320x256/208c</font></td>
+      <TD><FONT face="Arial" size="1"><A HREF="javascript:ViewImage('seductio.htm','celticf',320,256,0);" style="text-decoration: none;">
+        <IMG src="titan/seductio.jpg" width="150" height="113" border="0"><BR>
+        Seduction</A><BR>
+        320x256/31c</font></td>
+      <TD><FONT face="Arial" size="1"><a href="titan/pictures/misc.zip" style="text-decoration: none;">
+        <IMG src="titan/misc.jpg" width="150" height="113" border="0"><BR>
+        Misc. archive</A><BR>
+        1991 to today</font></td>
+    </TR>
+  </TABLE>
+</DIV>
+</BODY>
+</HTML>
