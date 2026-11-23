@@ -3,15 +3,10 @@
 <HEAD>
 <TITLE>BOMB//We have explosive!</TITLE>
 <SCRIPT language="JavaScript"><!--
-setTimeout('window.focus("bomb_win")', 1000);
-
 function changeLayerVisibility()
 {
-  var visStr, args;
-  args = changeLayerVisibility.arguments;
-  visStr = args[1];
-  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
-    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+  var args = changeLayerVisibility.arguments;
+  document.getElementById(args[0]).style.visibility = args[1];
 }
 function loaded()
 {
