@@ -5,6 +5,20 @@
 Archive of an old static website, served as-is from bunny.net at the hostname
 of [`site.json`](site.json). Kept online for history, no longer developed.
 
+## Changes from the original site
+
+The files are as served in 1998, apart from the changes needed to run in a modern browser:
+
+- `index.htm` shows the intro page (`eye.htm`) in an iframe, in a window frame that follows the OS
+  of the visitor on desktop and fills the screen in landscape on mobile (it used to open a popup).
+  `?os=win10|win11|mac2012|mac2014|mac2020|mac2026` and `?device=mobile|desktop` force a look.
+- The 2000-era `document.layers` scripts (menu rollovers, hover help, counter, gallery arrows, intro
+  loader) use `getElementById`.
+- The Java applets (`TmapCube`, `AnFade`) run with [CheerpJ](https://cheerpj.com/) (Community
+  licence, runtime loaded from its CDN, credit on the credits page). Their `.class` files are patched:
+  30 fps frame cap and click handler (a third-party ad dialog) disabled.
+- `download/arclst.inc` is inlined into the `download/*.shtml` pages (no SSI on the static host).
+
 ## Layout
 
 | Path | Content |
