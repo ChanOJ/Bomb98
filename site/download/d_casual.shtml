@@ -82,6 +82,7 @@ a{text-decoration:none}
     </TD>
     <TD width="200">&nbsp;</TD>
     <td>
+      <script src="https://cjrtnc.leaningtech.com/5.0/loader.js"></script>
       <applet code="AnFade.class" width="150" height="113">
       <param name="image1" value="thumbs/casual1.jpg">
       <param name="image2" value="thumbs/casual2.jpg">
@@ -96,6 +97,7 @@ a{text-decoration:none}
       <param name="priority" value="3">
       Sorry, your browser doesn't support Java.
       </applet>
+      <script>cheerpjInit();</script>
       </td>
       <td width="20"></td>
       <td><font size="1" face="Arial">
