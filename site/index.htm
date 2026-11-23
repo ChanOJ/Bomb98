@@ -7,68 +7,16 @@
 
 <title>BOMB//We have explosive!</title>
 
-<script language="Javascript"><!--
-// Browser name & Version
-
-var point_pos=0;
-var space_pos=0;
-
-browser_name = navigator.appName;
-point_pos = navigator.appVersion.indexOf(".",0);
-if (point_pos == -1) point_pos = navigator.appVersion.indexOf(" ",0);
-  else space_pos = navigator.appVersion.indexOf(" ",point_pos);
-if (space_pos == -1) space_pos = navigator.appVersion.length - 1;
-version = parseInt(navigator.appVersion.substring(0, point_pos));
-subversion = navigator.appVersion.substring(point_pos+1,space_pos);
-
-// Size of the window
-var nn=false;
-if ( ((browser_name=="Microsoft Internet Explorer")||(browser_name=="Netscape")) && (version >= 4) )
-{
-  nn = true;
-  wheight = 400;
-  wwidth = 800;
-}
-else
-{
-  alert("You need a browser compatible with Dynamic HTML (layers) to browse this site\nIf your browser is compatible, please inform me : chandra@mail.dotcom.fr\n\nDebug report :\n----------------------------\n"+
-    "navigator.appName : \t"+navigator.appName+"\n"+
-    "navigator.appVersion : \t"+navigator.appVersion+"\n"+
-    "navigator.userAgent : \t"+navigator.userAgent+"\n"+
-    "browser_name : \t\t*"+browser_name+"*"+"\n"+
-    "version : \t\t\t*"+version+"*"+"\n"+
-    "subversion : \t\t*"+subversion+"*");
-  if ( (document.referrer.substring(7,24)=="bomb.citeweb.net/") ||
-       (document.referrer.substring(7,28)=="www.citeweb.net/bomb/") ||
-       (document.referrer.substring(7,22)=="localhost/bomb/") )
-  {
-    location.href="http://ojuice.citeweb.net/";
-  }
-  else history.back();
-}
-// Open the window
-if (nn)
-{
-  bomb_win = window.open("eye.htm","bomb_win","toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width="+wwidth+",height="+wheight);
-  if ( (document.referrer.substring(7,24)=="bomb.citeweb.net") ||
-       (document.referrer.substring(7,28)=="www.citeweb.net/bomb") ||
-       (document.referrer.substring(7,22)=="localhost/bomb") )
-  {
-    location.href="http://ojuice.citeweb.net/";
-  }
-  else
-  {
-    history.back();
-  }
-};
-// end script --></script>
-<STYLE TYPE="text/css">
-a{text-decoration:none}
-</STYLE>
+<style type="text/css">
+html, body { margin:0; background:#ECA828; }
+iframe { display:block; border:0; width:800px; height:400px; }
+</style>
 </head>
 
-<body bgcolor="#ECA828">
-Sorry, you need a browser compatible with Dynamic HTML to browse this site.<BR>
-A light version will be soon available.
+<body>
+<iframe id="bomb" src="eye.htm" width="800" height="400" scrolling="no" frameborder="0" title="BOMB"></iframe>
+<noscript>
+<p>Sorry, this site needs a browser with frames and JavaScript enabled.</p>
+</noscript>
 </body>
 </html>
