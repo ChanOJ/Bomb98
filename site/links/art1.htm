@@ -8,8 +8,7 @@ function changeLayerVisibility()
   var visStr, args;
   args = changeLayerVisibility.arguments;
   visStr = args[1];
-  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
-    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+  document.getElementById(args[0]).style.visibility = visStr;
 }
 
 function NewWin(address)
