@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bomb98.sauthier.family/sitemap.xml
