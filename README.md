@@ -21,6 +21,12 @@ The files are as served in 1998, apart from the changes needed to run in a moder
   30 fps frame cap and click handler (a third-party ad dialog) disabled.
 - `download/arclst.inc` is inlined into the `download/*.shtml` pages (no SSI on the static host).
 
+## Search engines
+
+`scripts/seo.py` writes `robots.txt` (allow everything, with the `Sitemap:` line) and `sitemap.xml` (indexable pages only) into `site/`; run `python3 -I scripts/seo.py` after any change of `site/`.
+
+The whole site is shown in the window of `index.htm`. `scripts/frame-restore.js` (one `<script>` tag in every page, added by `seo.py`) sends a page opened on its own (a search result) to `index.htm#p=<page>`, which loads it in the iframe; the page stays a plain file, so crawlers still read it.
+
 ## Layout
 
 | Path | Content |
