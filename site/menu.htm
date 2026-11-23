@@ -4,17 +4,15 @@
 <TITLE>BOMB//We have explosive! - Menu</TITLE>
 <SCRIPT language="JavaScript">
 function MM_showHideLayers() { //v1.0
-  var i, visStr, args;
+  var i, visStr, args, el;
   args = MM_showHideLayers.arguments;
   for (i=0; i<(args.length-2); i+=3) { //with arg triples (objNS,objIE,visStr)
     visStr   = args[i+2];
-    if (navigator.appName == 'Netscape') {
-      if (document.layers != null) eval(args[i]+".visibility = '"+visStr+"'");
-    } else { //IE
-      if (visStr == 'show') visStr = 'visible'; //convert vals
-      if (visStr == 'hide') visStr = 'hidden';
-      if (document.all != null) eval(args[i+1]+".style.visibility = '"+visStr+"'");
-  } }
+    if (visStr == 'show') visStr = 'visible'; //convert vals
+    if (visStr == 'hide') visStr = 'hidden';
+    el = document.getElementById(args[i+1].match(/\['([^']+)'\]/)[1]); //objIE is "document.all['id']"
+    if (el) el.style.visibility = visStr;
+  }
 }
 </SCRIPT>
 <SCRIPT language="JavaScript"><!--
@@ -22,7 +20,7 @@ var v=-1;
 var y=170;
 var x=790;
 var dx=4;
-ScrollObj = (navigator.appName == 'Netscape')?"document.layers[\'compteur\']":"document.all[\'compteur\'].style"
+ScrollObj = "document.getElementById('compteur').style"
 
 function tombe()
 {
@@ -45,8 +43,8 @@ function tombe()
 
   if ((y==0) && (v<0) && (x<750)) setTimeout("tombe()",25);
 
-  eval(ScrollObj+".left = 790-x");
-  eval(ScrollObj+".top = 151-y");
+  eval(ScrollObj+".left = (790-x)+'px'");
+  eval(ScrollObj+".top = (151-y)+'px'");
 }
 //--></SCRIPT>
 <STYLE TYPE="text/css">

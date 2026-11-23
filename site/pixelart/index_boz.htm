@@ -8,8 +8,7 @@ function changeLayerVisibility()
   var visStr, args;
   args = changeLayerVisibility.arguments;
   visStr = args[1];
-  if (navigator.appName == 'Netscape') eval('document.layers["' + args[0] + '"].visibility = "' + visStr + '"');
-    else eval('document.all["' + args[0] + '"].style.visibility = "' + visStr + '"');
+  document.getElementById(args[0]).style.visibility = visStr;
 }
 //--></SCRIPT>
 <SCRIPT language="JavaScript"><!--
@@ -20,14 +19,14 @@ var pic_size = 160;
 var isdroite = 0;
 var isgauche = 1;
 
-ScrollObj = (navigator.appName == 'Netscape')?"document.layers[\'images\']":"document.all[\'images\'].style"
+ScrollObj = "document.getElementById('images').style"
 
 function l_gauche()
 {
   var valeur = parseInt(eval(ScrollObj+".left")) - pic_size;
   if (valeur >= max_left)
   {
-    eval(ScrollObj+".left = valeur");
+    eval(ScrollObj+".left = valeur+'px'");
     if (isgauche==1)
     {
       isgauche = 0;
@@ -48,7 +47,7 @@ function l_droite()
   var valeur = parseInt(eval(ScrollObj+".left")) + pic_size;
   if (valeur <= max_right)
   {
-    eval(ScrollObj+".left = valeur");
+    eval(ScrollObj+".left = valeur+'px'");
     if (isdroite==1)
     {
       isdroite = 0;
