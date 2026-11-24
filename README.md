@@ -20,7 +20,7 @@ The files are as served in 1998, apart from the changes needed to run in a moder
   licence, runtime loaded from its CDN, credit on the credits page). Their `.class` files are patched:
   30 fps frame cap and click handler (a third-party ad dialog) disabled.
 - `download/arclst.inc` is inlined into the `download/*.shtml` pages (no SSI on the static host).
-- Privacy: the BBS phone numbers (`download/bbs.htm`) and the e-mail addresses of people identified by their real name (Skal, Zappy's `terdiman_p` address, Randy) are masked as `????`; the addresses of nicks (Made, Patapom, Boz, Chris, Trasher, Zappy) and the site author's own address stay complete. The visitor counter and the raw-IP link were removed.
+- Privacy: the BBS phone numbers (`download/bbs.htm`) and the e-mail addresses of people identified by their real name (Skal, Zappy's `terdiman_p` address) are masked as `????`; the addresses of nicks and first names (Made, Patapom, Boz, Chris, Trasher, Zappy, Randy) and the site author's own address stay complete. The visitor counter and the raw-IP link were removed.
 - External links (`javascript:NewWin(...)` popups in 1998) are plain links opening in a new tab; the cross-links to the Citeweb and Orange Juice archives point to their new addresses.
 
 ## Search engines
