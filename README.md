@@ -20,6 +20,8 @@ The files are as served in 1998, apart from the changes needed to run in a moder
   licence, runtime loaded from its CDN, credit on the credits page). Their `.class` files are patched:
   30 fps frame cap and click handler (a third-party ad dialog) disabled.
 - `download/arclst.inc` is inlined into the `download/*.shtml` pages (no SSI on the static host).
+- Privacy: full phone numbers (`download/bbs.htm`) and e-mails are shown as `????`, except the site author's own address; the visitor counter is gone.
+- External links (`javascript:NewWin(...)` popups in 1998) are plain links opening in a new tab; the cross-links to the Citeweb and Orange Juice archives point to their new addresses.
 
 ## Search engines
 
@@ -108,10 +110,3 @@ The same files serve every old site of the bunny.net account; only `site.json`,
      new zones, moves the hostname, deletes the old zones, deploys `site/` to
      the new storage zone and runs the smoke test (a few minutes of errors at
      most, while the files are uploaded and the certificate issued).
-
-## To Do
-
-Cross-links to fix in a batch pass (the targets are archived on `sauthier.family`; rewrite the `href`s):
-
-- `www.citeweb.net` (4 links): Citeweb97 (https://citeweb97.sauthier.family).
-- `ojuice.citeweb.net` (2 links): Orange Juice 1997 (https://orangejuice97.sauthier.family).

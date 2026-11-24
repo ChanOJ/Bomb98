@@ -242,7 +242,7 @@ a{text-decoration:none}
         Gfx : Made<br>
         Music : Clawz<br><br>
         Click <a href="amiga/sat3inv.lha" style="text-decoration:none">HERE</a> for local download or try :<br>
-        <a href="ftp://ftp.funet.fi/pub/amiga/demos/bomb/bomb.sat3inv.lha" style="text-decoration:none">ftp.funet.fi/pub/amiga/demos/bomb/bomb.sat3inv.lha</a>
+        <a href="ftp://ftp.funet.fi/pub/amiga/demos/bomb/bomb.sat3inv.lha" target="_blank" rel="noopener" style="text-decoration:none">ftp.funet.fi/pub/amiga/demos/bomb/bomb.sat3inv.lha</a>
     </font></td>
   </TR>
 </TABLE>
