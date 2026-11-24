@@ -108,3 +108,10 @@ The same files serve every old site of the bunny.net account; only `site.json`,
      new zones, moves the hostname, deletes the old zones, deploys `site/` to
      the new storage zone and runs the smoke test (a few minutes of errors at
      most, while the files are uploaded and the certificate issued).
+
+## To Do
+
+Cross-links to fix in a batch pass (the targets are archived on `sauthier.family`; rewrite the `href`s):
+
+- `www.citeweb.net` (4 links): Citeweb97 (https://citeweb97.sauthier.family).
+- `ojuice.citeweb.net` (2 links): Orange Juice 1997 (https://orangejuice97.sauthier.family).
