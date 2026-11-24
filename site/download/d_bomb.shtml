@@ -243,7 +243,7 @@ a{text-decoration:none}
         Gfx & 3d : Made & Titan<br>
         Music : Clawz<br><br>
         Click <a href="pc/bomb.zip" style="text-decoration:none">HERE</a> for local download or try :<br>
-        <a href="ftp://ftp.cdrom.com/.24/demos/demos/1996/i/i-bomb.zip" style="text-decoration:none">ftp.cdrom.com/.24/demos/demos/1996/i/i-bomb.zip</a>
+        <a href="ftp://ftp.cdrom.com/.24/demos/demos/1996/i/i-bomb.zip" target="_blank" rel="noopener" style="text-decoration:none">ftp.cdrom.com/.24/demos/demos/1996/i/i-bomb.zip</a>
     </font></td>
   </TR>
 </TABLE>

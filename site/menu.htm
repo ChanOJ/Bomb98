@@ -15,54 +15,14 @@ function MM_showHideLayers() { //v1.0
   }
 }
 </SCRIPT>
-<SCRIPT language="JavaScript"><!--
-var v=-1;
-var y=170;
-var x=790;
-var dx=4;
-ScrollObj = "document.getElementById('compteur').style"
-
-function tombe()
-{
-  y += v;
-  v -= 0.5; // champ de gravite (0 = espace)
-  x -= dx; // pif 13
-  dx += 0.03;
-  if (y<0)
-  {
-    y = -y;
-    v = -v-4; // amortissement du rebond (0 = infini)
-    if (v>=0) setTimeout("tombe()",25);
-    else y=0;
-    dx -= 1;
-  }
-  else
-  {
-    setTimeout("tombe()",25);
-  }
-
-  if ((y==0) && (v<0) && (x<750)) setTimeout("tombe()",25);
-
-  eval(ScrollObj+".left = (790-x)+'px'");
-  eval(ScrollObj+".top = (151-y)+'px'");
-}
-//--></SCRIPT>
 <STYLE TYPE="text/css">
 a{text-decoration:none}
 </STYLE>
 </HEAD>
 
-<BODY background="menu_bkg.jpg" bgcolor="#ECA828" onload="tombe()">
+<BODY background="menu_bkg.jpg" bgcolor="#ECA828">
 <DIV id="bomb" style="position:absolute; width:291px; height:149px; z-index:2; left:0; top:0">
   <IMG src="menu_bmb.gif" border="0" width="291" height="149"> 
-</DIV>
-<DIV id="compteur" style="position:absolute; width:225px; height:12px; z-index:2; left:0; top:-50">
-	<IMG src="/cgi-bin/counter.cgi?position=5">
-	<IMG src="/cgi-bin/counter.cgi?position=4">
-	<IMG src="/cgi-bin/counter.cgi?position=3">
-	<IMG src="/cgi-bin/counter.cgi?position=2">
-	<IMG src="/cgi-bin/counter.cgi?position=1">
-	<IMG src="visitors.gif" border="0" width="104" height="12"> 
 </DIV>
 <DIV id="menu" style="position:absolute; width:240px; height:206px; z-index:1; left:560px; top:182px">
   <IMG src="menu_mnu.gif" border="0" width="240" height="206" usemap="#menu_map"> 

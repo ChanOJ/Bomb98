@@ -244,7 +244,7 @@ a{text-decoration:none}
         Music : Clawz<br>
         Infos : All 3d & gfx stuff done in 4 days.<br><br>
         Click <a href="pc/explora.zip" style="text-decoration:none">HERE</a> for local download or try :<br>
-        <a href="ftp://ftp.cdrom.com/.24/demos/demos/1996/e/explora.zip" style="text-decoration:none">ftp.cdrom.com/.24/demos/demos/1996/e/explora.zip</a>
+        <a href="ftp://ftp.cdrom.com/.24/demos/demos/1996/e/explora.zip" target="_blank" rel="noopener" style="text-decoration:none">ftp.cdrom.com/.24/demos/demos/1996/e/explora.zip</a>
     </font></td>
   </TR>
 </TABLE>

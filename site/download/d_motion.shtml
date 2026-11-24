@@ -244,7 +244,7 @@ a{text-decoration:none}
         Music : Clawz<br>
         Infos : HD version<br><br>
         Click <a href="amiga/motion.lha" style="text-decoration:none">HERE</a> for local download or try :<br>
-        <a href="ftp://ftp.funet.fi/pub/amiga/demos/bomb/bomb.motion.lha" style="text-decoration:none">ftp.funet.fi/pub/amiga/demos/bomb/bomb.motion.lha</a>
+        <a href="ftp://ftp.funet.fi/pub/amiga/demos/bomb/bomb.motion.lha" target="_blank" rel="noopener" style="text-decoration:none">ftp.funet.fi/pub/amiga/demos/bomb/bomb.motion.lha</a>
     </font></td>
   </TR>
 </TABLE>
