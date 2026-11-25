@@ -217,7 +217,7 @@ a{text-decoration:none}
     </TD>
     <TD width="200">&nbsp;</TD>
     <td>
-        <script src="https://cjrtnc.leaningtech.com/5.0/loader.js"></script>
+        <script src="https://cjrtnc.leaningtech.com/5.0/loader.js" integrity="sha384-zXh+ydEgZpoWR7su3jA/GH/WrYrX7jRmHWYHcyFE+q4qEAUnF6oW1zEbkWjyZib8" crossorigin="anonymous"></script>
         <applet code="AnFade.class" width="150" height="113">
         <param name="image1" value="thumbs/shian1.jpg">
         <param name="image2" value="thumbs/shian2.jpg">
